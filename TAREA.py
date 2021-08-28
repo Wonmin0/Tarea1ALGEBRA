@@ -29,3 +29,9 @@ numpy.savetxt('correlation_matrix.csv',A, delimiter = ',')
 #número de elementos distintos de cero es aproximadamente igual al número de filas o columnas. 
 #Por el contrario, si la mayoría de los elementos son distintos de cero, la matriz se considera densa.
 
+#Esta caracteristica se cumple en la matriz A, debido a que la mayoria de sus elemento son 0,
+#y los valores no ceros son aproximadamente iguales al numero de filas o de columnas.
+
+#Esta propiedad implica que la mayoria de las especies, tienen como mínimo un depredador, es decir
+#en la mayoria de los casos, hay al menos un valor distinto de 0 por fila.
+
