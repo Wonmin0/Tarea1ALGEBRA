@@ -32,6 +32,7 @@ numpy.savetxt('correlation_matrix.csv',A, delimiter = ',')
 #Esta caracteristica se cumple en la matriz A, debido a que la mayoria de sus elemento son 0,
 #y los valores no ceros son aproximadamente iguales al numero de filas o de columnas.
 
-#Esta propiedad implica que la mayoria de las especies, tienen como mínimo un depredador, es decir
-#en la mayoria de los casos, hay al menos un valor distinto de 0 por fila.
+#Esta propiedad implica que todas las especies (a excepcion del phytoplancton) tienen al menos una presa,
+#es decir, hay al menos un elemento distinto de 0 por columna, a excepcion de la columna 12 que es la que
+#representa al phytoplancton
 
