@@ -84,7 +84,7 @@ print('8=FP')
 print('9=OP')
 print('10=FAN')
 print('11=BA')
-#Pregunta4
+#Pregunta4 PREGUNTAR AL PROFE
 import sympy as sp
 import networkx as nx
 G=nx.DiGraph()
@@ -121,3 +121,55 @@ print('9=OP')
 print('10=FAN')
 print('11=BA')
 A=sp.Matrix(A)
+A = A.T
+#PREGUNTA 5
+ax=[]
+for x in range(11):
+    a=sum(A.row(x))
+    ax.append(a)
+print(ax)
+#PREGUNTA 7
+import networkx as nx
+G=nx.Graph()
+nodeslist=["phy","ZH","ZC","TA","CAP","FA","BAC","PA","FP","OP","FAN","BA"]
+for node in nodeslist:
+    G.add_node(node)
+print("nodeslist:", G.nodes()) 
+
+start= ["ZC","TA","FA","FA","FA","FA","PA","PA","OP","OP"]
+to=    ["BAC","BAC","FP","PA","OP","FAN","OP","FAN","FAN","BA"]
+value=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1] 
+for j in range(0, len(start)):
+    G.add_weighted_edges_from([(start[j], to[j], value[j])]) 
+nx.draw(G, with_labels=True,pos=nx.circular_layout(G),
+        width=[float(v['weight']) for (r, c, v) in G.edges(data=True)])
+import matplotlib.pyplot as plt
+plt.show()
+a= nx.adjacency_matrix(G)
+print(a)
+A=a.todense()
+print(A)
+import numpy
+numpy.savetxt('correlation_matrix.csv',A, delimiter = ',')
+print('0=phy')
+print('1=ZH')
+print('2=ZC')
+print('3=TA')
+print('4=CAP')
+print('5=FA')
+print('6=BAC')
+print('7=PA')
+print('8=FP')
+print('9=OP')
+print('10=FAN')
+print('11=BA')
+
+"PENDIENTE"
+#Pregunta 8 
+#Comente: ¿Que significa que un vertice este aislado? ¿Que ventajas o desventajas
+#puede tener este tipo de especies en un ecosistema? Investigue el concepto de especie clave y
+#relacionelo con el grafo obtenido.
+#Significa que esa especie no comparte presa con ninguna otra del ecosistema, en el caso particular del phytoplancton,
+#este no comparte presa debido a que no consume a ninguna especie del ecosistema (es un consumidor primario).
+#Ventajas: No compite con ninguna otra especie por alimento,
+#
