@@ -1,4 +1,5 @@
 #Pregunta 1
+
 import networkx as nx
 G=nx.DiGraph()
 #nodeslist=["phy","ZH","ZC","TA","CAP","FA","BAC","PA","FP","OP","FAN","BA"]
@@ -22,6 +23,11 @@ A=a.todense()
 print(A)
 import numpy
 numpy.savetxt('correlation_matrix.csv',A, delimiter = ',')
+
+
+'--------------------------------------------------'
+
+#PREGUNTA 2
 
 #una matriz dispersa es una matriz en la que la mayoría de los elementos son cero. 
 #No existe una definición estricta con respecto a la proporción de elementos de valor 
