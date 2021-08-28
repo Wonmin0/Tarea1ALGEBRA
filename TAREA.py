@@ -23,3 +23,9 @@ print(A)
 import numpy
 numpy.savetxt('correlation_matrix.csv',A, delimiter = ',')
 
+#una matriz dispersa es una matriz en la que la mayoría de los elementos son cero. 
+#No existe una definición estricta con respecto a la proporción de elementos de valor 
+#cero para que una matriz califique como dispersa, pero un criterio común es que el 
+#número de elementos distintos de cero es aproximadamente igual al número de filas o columnas. 
+#Por el contrario, si la mayoría de los elementos son distintos de cero, la matriz se considera densa.
+
